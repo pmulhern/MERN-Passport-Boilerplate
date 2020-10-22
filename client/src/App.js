@@ -3,7 +3,6 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import Register from './Components/Register';
-import Todos from './Components/Todos';
 import Admin from './Components/Admin';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import PrivateRoute from './hocs/PrivateRoute'

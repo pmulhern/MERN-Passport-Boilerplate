@@ -15,6 +15,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/arcade", {
 .then(() => console.log("MongoDB successfully connected!!"))
 .catch(err => console.log(err));
 
+const userRouter = require('./routes/User');
+app.use('/user',userRouter)
+
+app.listen(PORT, function() {
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
+  });
+
 // const User = require('./models/User.js')
 
 // const userInput = {
@@ -29,10 +36,3 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/arcade", {
 //     console.log(err);
 //   console.log(document)
 // });
-
-const userRouter = require('./routes/User');
-app.use('/user',userRouter)
-
-app.listen(PORT, function() {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
-  });

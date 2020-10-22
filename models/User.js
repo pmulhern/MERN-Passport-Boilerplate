@@ -16,8 +16,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         enum: ['user', 'admin'],
         required: true
-    },
-    todos: [{type: mongoose.Schema.Types.ObjectId, ref: 'Todo'}]
+    }
 });
 
 // Checking to see if the password is hashed in this pre-save function
